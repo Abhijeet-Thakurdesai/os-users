@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" >OpenSpecimen</a>
+      <a class="navbar-brand clickable"  (click)="add()" *ngIf="admin == 'true' " >  Add New </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     
+      <form class="navbar-form navbar-left">
+        
+        <div class="form-group">
+          
+          <input type="text" class="form-control" placeholder="Search User" #box (keyup)="onEnter(box.value)"  />
+        </div>
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      </form>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a>{{userId}}</a></li>
+        <li><a href="#" (click)="logout()" >Logout</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- navbar bar ends -->
+
+ <div *ngIf="loading">Please wait...</div>
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                <span>Id</span>
+              </th>
+              <th>
+                <span>First Name</span>
+              </th>
+              <th>
+                <span>Last Name</span>
+              </th>
+              <th>
+                <span>Email Address</span>
+              </th>
+              <th>
+                <span>Admin</span>
+              </th>
+              <th>
+                <span>Institute Name</span>
+              </th>
+              <th>
+                <span>Domain</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="clickable"  *ngFor="let item of users" (click)="showClient(item.id)" >
+              <td>
+                {{item.id}}
+              </td>
+              <td>{{item.firstName}}
+              </td>
+              <td>
+                {{item.lastName}}
+              </td>
+              <td>
+                {{item.emailAddress}}
+              </td>
+              <td>
+                {{item.admin}}
+              </td>
+              <td>
+                {{item.instituteName}}
+              </td>
+              <td>
+                {{item.domain}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>

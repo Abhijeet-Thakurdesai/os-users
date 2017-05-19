@@ -1,0 +1,21 @@
+    <script src="https://use.typekit.net/ayg4pcz.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <div class="container">
+      <br>
+        <div class="card card-container">
+        <h2 class='login_title text-center'>Login</h2>
+        <hr>
+            <form class="form-signin"  >
+                <span id="reauth-email" class="reauth-email"></span>
+                <p class="input_title">User Id</p>
+                <input type="text" id="id" class="login_box" placeholder="user@openspecimen.com" required #id >
+                <p class="input_title">Password</p>
+                <input type="password" id="password" class="login_box" placeholder="****" required #pass>
+                <button class="btn btn-lg btn-primary" type="submit" (click)="login(id.value,pass.value)" >Login</button>
+                <div *ngIf="errMessage" class="error">
+                    Invalid Username Or Password
+                </div>
+            </form><!-- /form -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->

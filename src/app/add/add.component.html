@@ -1,0 +1,56 @@
+<br>
+<br>
+<h1> View New User </h1>
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" >
+
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">First Name</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control"  placeholder="First Name" formControlName="firstName" required >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Last Name</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control"  placeholder="Last Name" formControlName="lastName" required >
+      </div>
+    </div>
+
+     <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Login Name</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control"  placeholder="Login Name" formControlName="loginName" required >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Domain</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control"  placeholder="Domain Name" formControlName="domainName" required >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Email Address</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" placeholder="Email" formControlName="emailAddress"  required >
+      </div>
+    </div>
+
+     <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Institute Name</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" placeholder="Eg. Krishagni" formControlName="instituteName" required >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Add User</button>
+      </div>
+    </div>
+
+  </form>
+</div>

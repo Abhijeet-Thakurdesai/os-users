@@ -1,0 +1,15 @@
+.clickable {
+    cursor: pointer;
+}
+
+
+
+tr.clickable:hover {
+    background-color: grey;
+}
+
+tr {
+    background-color: white;
+}
+
+
