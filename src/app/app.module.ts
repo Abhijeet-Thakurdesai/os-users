@@ -8,8 +8,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { AddComponent } from './add/add.component';
-import { EditComponent } from './edit/edit.component';
+import { OverviewComponent } from './overview/overview.component';
+import { AddeditComponent } from './addedit/addedit.component';
 
 
 @NgModule({
@@ -17,8 +17,8 @@ import { EditComponent } from './edit/edit.component';
     AppComponent,
     LoginComponent,
     UserListComponent,
-    AddComponent,
-    EditComponent
+    OverviewComponent,
+    AddeditComponent
   ],
   imports: [
     BrowserModule,

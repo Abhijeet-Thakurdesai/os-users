@@ -1,6 +1,7 @@
+<div *ngIf="load">
 <br>
 <br>
-<h1> View / Edit user </h1>
+<h1> Add/Edit New User </h1>
 <div class="container">
   <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" >
 
@@ -21,36 +22,37 @@
      <div class="form-group row">
       <label  class="col-sm-2 col-form-label">Login Name</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control"  placeholder="Login Name" formControlName="loginName" value={{user?.loginName}} required >
+        <input type="text" class="form-control"  placeholder="Login Name" value={{user?.loginName}} formControlName="loginName"  required >
       </div>
     </div>
 
     <div class="form-group row">
       <label  class="col-sm-2 col-form-label">Domain</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control"  placeholder="Domain Name" formControlName="domainName" value={{user?.domainName}} required >
+        <input type="text" class="form-control"  placeholder="Domain Name" value={{user?.domainName}} formControlName="domainName" required >
       </div>
     </div>
 
     <div class="form-group row">
       <label  class="col-sm-2 col-form-label">Email Address</label>
       <div class="col-sm-5">
-        <input type="email" class="form-control" placeholder="Email" formControlName="emailAddress" value={{user?.emailAddress}} required >
+        <input type="email" class="form-control" placeholder="Email" value={{user?.emailAddress}} formControlName="emailAddress"  required >
       </div>
     </div>
 
      <div class="form-group row">
       <label  class="col-sm-2 col-form-label">Institute Name</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" placeholder="Eg. Krishagni" formControlName="instituteName" value={{user?.instituteName}} required >
+        <input type="text" class="form-control" placeholder="Eg. Krishagni" value={{user?.instituteName}} formControlName="instituteName" required >
       </div>
     </div>
 
     <div class="form-group row">
       <div class="offset-sm-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary">Save User</button>
       </div>
     </div>
 
   </form>
+</div>
 </div>
